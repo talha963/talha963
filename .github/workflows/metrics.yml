@@ -1,9 +1,9 @@
-﻿name: Generate Metrics & Contribution Calendar
+﻿name: Generate Metrics
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # Every day at 2 AM UTC
-  workflow_dispatch:        # Run manually anytime
+    - cron: "0 2 * * *"
+  workflow_dispatch:
   push:
     branches: [main]
 
@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Generate GitHub Metrics SVG
         uses: lowlighter/metrics@latest
@@ -22,15 +21,12 @@ jobs:
           user: talha963
           template: classic
           base: header, activity, community, repositories
-          base_indepth: yes
           plugin_languages: yes
-          plugin_languages_limit: 8
+          plugin_languages_limit: 6
           plugin_languages_colors: github
-          plugin_languages_sections: most-used
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           config_timezone: Asia/Karachi
-          config_display: large
           config_animations: yes
           output_action: commit
           committer_branch: output

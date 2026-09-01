@@ -158,7 +158,7 @@ print(me.current_mission())
 <div align="center">
   <h2>&#128200; Contribution Calendar</h2>
   <br/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=talha963&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&area_color=1f6feb&hide_border=true&radius=6" alt="Contribution Graph"/>
+  <img src="https://raw.githubusercontent.com/talha963/talha963/output/github-metrics.svg" alt="GitHub Metrics"/>
 </div>
 
 ---
