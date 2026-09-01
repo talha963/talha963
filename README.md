@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=220&section=header&text=Talha%20Habib&fontSize=75&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&descAlignY=60&fontColor=58a6ff&descColor=8b949e&animation=fadeIn" alt="Header"/>
 
@@ -158,7 +158,7 @@ print(me.current_mission())
 <div align="center">
   <h2>&#128200; Contribution Calendar</h2>
   <br/>
-  <img src="https://raw.githubusercontent.com/talha963/talha963/output/github-metrics.svg" alt="GitHub Metrics" onerror="this.style.display='none'"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=talha963&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&area_color=1f6feb&hide_border=true&radius=6" alt="Contribution Graph"/>
 </div>
 
 ---
@@ -178,9 +178,7 @@ print(me.current_mission())
 
 <div align="center">
 
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=5000&pause=2000&color=F78166&center=true&vCenter=true&width=700&lines=%F0%9F%94%A5+%22Data+is+the+new+oil%2C+AI+is+the+engine%22;%F0%9F%A7%A0+%22Think+big%2C+build+smart%2C+ship+fast%22;&#128640;+%22Every+model+trained+is+a+step+forward%22" alt="Quote Typing"/>
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=5000&pause=2000&color=F78166&center=true&vCenter=true&width=700&lines=Data+is+the+new+oil+%E2%80%94+AI+is+the+engine+%F0%9F%94%A5;Think+big+%7C+Build+smart+%7C+Ship+fast+%F0%9F%9A%80;Every+model+trained+is+a+step+forward+%F0%9F%A7%A0" alt="Animated Quote"/>
 
 </div>
 
