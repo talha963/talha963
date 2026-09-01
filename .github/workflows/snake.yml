@@ -1,29 +1,155 @@
-﻿name: Generate Snake Animation
+﻿name: Generate Snake & Contribution Graph
 
 on:
   schedule:
-    # Runs every 24 hours
     - cron: "0 0 * * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
-      - name: Generate Snake (Dark & Light)
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: output
+        continue-on-error: true
+
+      - name: Checkout main (fallback if output branch missing)
+        uses: actions/checkout@v4
+
+      - name: Generate Snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Generate Contribution Graph
+        uses: MikeyBeLike/github-readme-stats-action@main
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_path: dist/contribution-graph.svg
+
+      - name: Generate Contribution Heatmap via Python
+        run: |
+          pip install requests pillow svgwrite 2>/dev/null || pip install requests 2>/dev/null
+          python3 << 'PYEOF'
+          import requests, json, os
+          from datetime import datetime
+
+          username = "talha963"
+          token = os.environ.get("GITHUB_TOKEN", "")
+          
+          headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+          query = """
+          query($login: String!) {
+            user(login: $login) {
+              contributionsCollection {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                      color
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+          
+          try:
+            r = requests.post("https://api.github.com/graphql",
+                headers=headers,
+                json={"query": query, "variables": {"login": username}},
+                timeout=15)
+            data = r.json()
+            weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+            total = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+          except Exception as e:
+            print(f"Error fetching data: {e}")
+            weeks = []
+            total = 0
+
+          # SVG generation
+          cell = 13
+          gap = 3
+          cols = len(weeks)
+          rows = 7
+          pad_top = 40
+          pad_left = 30
+          pad_right = 20
+          pad_bottom = 20
+          width = pad_left + cols * (cell + gap) + pad_right
+          height = pad_top + rows * (cell + gap) + pad_bottom
+
+          months = {}
+          for wi, week in enumerate(weeks):
+            for day in week["contributionDays"]:
+              m = day["date"][:7]
+              if m not in months:
+                months[m] = wi
+
+          svg_parts = []
+          svg_parts.append(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+          <style>
+            @keyframes fadeIn {{ from {{opacity:0}} to {{opacity:1}} }}
+            .cell {{ animation: fadeIn 1.5s ease forwards; }}
+            text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
+          </style>
+          <rect width="{width}" height="{height}" rx="8" fill="#0d1117"/>
+          <text x="{pad_left}" y="22" fill="#8b949e" font-size="12">Contribution Calendar — {total} contributions in the last year</text>
+          ''')
+
+          # Month labels
+          month_names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+          rendered_months = set()
+          for m_key, wi in months.items():
+            month_num = int(m_key.split("-")[1]) - 1
+            label = month_names[month_num]
+            if label not in rendered_months:
+              x = pad_left + wi * (cell + gap)
+              svg_parts.append(f'<text x="{x}" y="{pad_top - 5}" fill="#8b949e" font-size="10">{label}</text>')
+              rendered_months.add(label)
+
+          # Cells
+          for wi, week in enumerate(weeks):
+            for di, day in enumerate(week["contributionDays"]):
+              x = pad_left + wi * (cell + gap)
+              y = pad_top + di * (cell + gap)
+              color = day["color"] if day["color"] != "#ebedf0" else "#161b22"
+              # Make 0 contributions a dark color for dark theme
+              if day["contributionCount"] == 0:
+                color = "#161b22"
+              delay = (wi * 7 + di) * 0.005
+              count = day["contributionCount"]
+              svg_parts.append(
+                f'<rect class="cell" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{color}" style="animation-delay:{delay:.3f}s">'
+                f'<title>{day["date"]}: {count} contribution{"s" if count != 1 else ""}</title>'
+                f'</rect>'
+              )
+
+          svg_parts.append('</svg>')
+          
+          os.makedirs("dist", exist_ok=True)
+          with open("dist/contribution-graph.svg", "w") as f:
+            f.write("\n".join(svg_parts))
+          
+          print(f"Generated contribution graph with {total} total contributions, {cols} weeks")
+          PYEOF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
