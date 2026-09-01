@@ -1,14 +1,14 @@
 ﻿<div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=200&section=header&text=Talha%20Habib&fontSize=70&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&descAlignY=60&fontColor=58a6ff&descColor=8b949e&animation=fadeIn" alt="Header Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=200&section=header&text=Talha%20Habib&fontSize=70&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&descAlignY=60&fontColor=58a6ff&descColor=8b949e&animation=fadeIn" alt="Header"/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=AI+%2F+ML+Engineer+%F0%9F%A4%96;Building+Intelligent+Systems+%F0%9F%9A%80;LLMs+%7C+RAG+%7C+Agents+%7C+MLOps+%E2%9A%A1;Turning+Data+into+Intelligence+%F0%9F%A7%A0" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=AI+%2F+ML+Engineer+%F0%9F%A4%96;Building+Intelligent+Systems+%F0%9F%9A%80;LLMs+%7C+RAG+%7C+Agents+%7C+MLOps+%E2%9A%A1;Turning+Data+into+Intelligence+%F0%9F%A7%A0" alt="Typing SVG"/>
 </a>
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=talha963&label=Profile%20Views&color=58a6ff&style=for-the-badge" alt="profile views"/>
+<img src="https://komarev.com/ghpvc/?username=talha963&label=Profile%20Views&color=58a6ff&style=for-the-badge" alt="Profile Views"/>
 
 </div>
 
@@ -87,48 +87,48 @@ print(me.current_mission())
   <tr>
     <td width="50%" valign="top">
       <h3>&#127973; MedFlow-Clinic</h3>
-      <p>A full-featured clinic management system for managing patient flows, appointments, and medical records.</p>
+      <p>Full-featured clinic management system for patient flows, appointments and medical records.</p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white"/>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
       </p>
       <a href="https://github.com/talha963/MedFlow-Clinic">
-        <img src="https://img.shields.io/badge/View%20Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white"/>
+        <img src="https://img.shields.io/badge/View%20Repo-%2358a6ff?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
     </td>
     <td width="50%" valign="top">
       <h3>&#127909; YouTube Content Generator</h3>
-      <p>AI-powered system that automatically generates, plans and creates YouTube content using LLMs and agents.</p>
+      <p>AI-powered system that automatically generates and plans YouTube content using LLMs and agents.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
       </p>
       <a href="https://github.com/talha963/Youtube_Content_Generation_System">
-        <img src="https://img.shields.io/badge/View%20Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white"/>
+        <img src="https://img.shields.io/badge/View%20Repo-%2358a6ff?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>&#128197; Calderr 2026</h3>
-      <p>Smart calendar and scheduling application with intelligent reminders and event management built in Python.</p>
+      <p>Smart calendar and scheduling application with intelligent reminders and event management.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
       </p>
       <a href="https://github.com/talha963/calderr-2026">
-        <img src="https://img.shields.io/badge/View%20Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white"/>
+        <img src="https://img.shields.io/badge/View%20Repo-%2358a6ff?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
     </td>
     <td width="50%" valign="top">
       <h3>&#128196; Resume Analyzer</h3>
-      <p>AI-powered resume analyzer that extracts skills, scores candidates and provides tailored feedback using NLP.</p>
+      <p>AI-powered resume analyzer that scores candidates and gives tailored feedback using NLP.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"/>
       </p>
       <a href="https://github.com/talha963/Resume_Analyzer">
-        <img src="https://img.shields.io/badge/View%20Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white"/>
+        <img src="https://img.shields.io/badge/View%20Repo-%2358a6ff?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
     </td>
   </tr>
@@ -141,22 +141,25 @@ print(me.current_mission())
 </div>
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=talha963&show_icons=true&theme=github_dark&border_color=30363d&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&count_private=true&include_all_commits=true" alt="GitHub Stats"/>
-  &nbsp;
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=talha963&layout=compact&theme=github_dark&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&langs_count=8" alt="Top Languages"/>
-</div>
 
-<br/>
+![Repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftalha963&query=public_repos&label=Public%20Repos&style=for-the-badge&color=58a6ff&labelColor=0d1117&logo=github&logoColor=white)
+&nbsp;
+![Stars](https://img.shields.io/github/stars/talha963?affiliations=OWNER&style=for-the-badge&color=58a6ff&labelColor=0d1117&logo=github&logoColor=white&label=Total%20Stars)
+&nbsp;
+![Commits](https://img.shields.io/badge/95%2B-Contributions-58a6ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=talha963&theme=github-dark-blue&border=30363d&ring=58a6ff&fire=ff6b35&currStreakLabel=58a6ff" alt="GitHub Streak"/>
+<br/><br/>
+
+<img src="https://streak-stats.demolab.com?user=talha963&theme=github-dark-blue&border=30363d&ring=58a6ff&fire=ff6b35&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
+
 </div>
 
 ---
 
 <div align="center">
-  <h2>&#128200; Contribution Graph</h2>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=talha963&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true" alt="Contribution Graph"/>
+  <h2>&#128200; Contribution Calendar</h2>
+  <br/>
+  <img src="https://ghchart.romantiquecat.com/58a6ff/talha963" alt="Talha's Contribution Chart"/>
 </div>
 
 ---
@@ -165,9 +168,9 @@ print(me.current_mission())
   <h2>&#128013; Watch My Contributions Get Eaten!</h2>
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/talha963/talha963/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/talha963/talha963/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/talha963/talha963/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/talha963/talha963/output/github-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/talha963/talha963/output/github-snake.svg"/>
+    <img alt="github-snake" src="https://raw.githubusercontent.com/talha963/talha963/output/github-snake-dark.svg"/>
   </picture>
 
 </div>
@@ -175,22 +178,12 @@ print(me.current_mission())
 ---
 
 <div align="center">
-  <h2>&#128161; Daily Motivation</h2>
 
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Quote"/>
+  <b><i>"Data is the new oil — AI is the engine that refines it." &#128293;</i></b>
 
   <br/><br/>
 
-  <b><i>"Data is the new oil — but AI is the engine that refines it." &#128293;</i></b>
-
-</div>
-
----
-
-<div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a1a2e,100:0d1117&height=120&section=footer&animation=fadeIn" alt="Footer"/>
-
-  <br/>
 
   <b>&#10024; Let's build the future with AI — one model at a time &#10024;</b>
 
