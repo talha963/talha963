@@ -158,7 +158,7 @@ print(me.current_mission())
 <div align="center">
   <h2>&#128200; Contribution Calendar</h2>
   <br/>
-  <img src="https://raw.githubusercontent.com/talha963/talha963/output/contribution-graph.svg" alt="Contribution Graph"/>
+  <img src="https://raw.githubusercontent.com/talha963/talha963/main/contribution-graph.svg" alt="Contribution Graph"/>
 </div>
 
 ---
