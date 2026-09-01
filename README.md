@@ -1,15 +1,23 @@
 ﻿<div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=200&section=header&text=Talha%20Habib&fontSize=70&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&descAlignY=60&fontColor=58a6ff&descColor=8b949e&animation=fadeIn" alt="Header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=220&section=header&text=Talha%20Habib&fontSize=75&fontAlignY=38&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&descAlignY=60&fontColor=58a6ff&descColor=8b949e&animation=fadeIn" alt="Header"/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=AI+%2F+ML+Engineer+%F0%9F%A4%96;Building+Intelligent+Systems+%F0%9F%9A%80;LLMs+%7C+RAG+%7C+Agents+%7C+MLOps+%E2%9A%A1;Turning+Data+into+Intelligence+%F0%9F%A7%A0" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=AI+%2F+ML+Engineer+%F0%9F%A4%96;Building+Intelligent+Systems+%F0%9F%9A%80;LLMs+%7C+RAG+%7C+Agents+%7C+MLOps+%E2%9A%A1;Turning+Data+into+Intelligence+%F0%9F%A7%A0;Open+to+Collaborate+%F0%9F%A4%9D" alt="Typing SVG"/>
 </a>
 
 <br/>
 
 <img src="https://komarev.com/ghpvc/?username=talha963&label=Profile%20Views&color=58a6ff&style=for-the-badge" alt="Profile Views"/>
 
+</div>
+
+---
+
+<div align="center">
+<a href="https://git.io/typing-svg">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&duration=4000&pause=500&color=3FB950&center=true&vCenter=true&width=700&lines=const+mood+%3D+%22always+building+something+cool%22%3B;if+(coffee)+%7B+code()+%7D+else+%7B+get_more_coffee()+%7D;status%3A+%F0%9F%9F%A2+open+to+collaborate+%26+new+opportunities" alt="Status Bar"/>
+</a>
 </div>
 
 ---
@@ -44,35 +52,26 @@ print(me.current_mission())
 
 <div align="center">
 
-**&#128013; Languages**
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,nodejs,fastapi,docker,mongodb,mysql,git,github&theme=dark&perline=10" alt="Skill Icons Row 1"/>
+</a>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+<br/><br/>
 
-**&#129302; AI / ML**
+**&#129302; AI / ML Ecosystem**
 
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-**&#128452; Databases &amp; Vector Stores**
+**&#128452; Vector Stores**
 
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/Chroma-FF6B35?style=for-the-badge&logo=databricks&logoColor=white)
 ![FAISS](https://img.shields.io/badge/FAISS-0081FB?style=for-the-badge&logo=meta&logoColor=white)
-
-**&#128736; Frameworks &amp; Tools**
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 </div>
 
@@ -146,7 +145,7 @@ print(me.current_mission())
 &nbsp;
 ![Stars](https://img.shields.io/github/stars/talha963?affiliations=OWNER&style=for-the-badge&color=58a6ff&labelColor=0d1117&logo=github&logoColor=white&label=Total%20Stars)
 &nbsp;
-![Commits](https://img.shields.io/badge/95%2B-Contributions-58a6ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)
+![Contributions](https://img.shields.io/badge/95%2B-Contributions-58a6ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)
 
 <br/><br/>
 
@@ -159,7 +158,7 @@ print(me.current_mission())
 <div align="center">
   <h2>&#128200; Contribution Calendar</h2>
   <br/>
-  <img src="https://ghchart.romantiquecat.com/58a6ff/talha963" alt="Talha's Contribution Chart"/>
+  <img src="https://raw.githubusercontent.com/talha963/talha963/output/github-metrics.svg" alt="GitHub Metrics" onerror="this.style.display='none'"/>
 </div>
 
 ---
@@ -179,11 +178,16 @@ print(me.current_mission())
 
 <div align="center">
 
-  <b><i>"Data is the new oil — AI is the engine that refines it." &#128293;</i></b>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=5000&pause=2000&color=F78166&center=true&vCenter=true&width=700&lines=%F0%9F%94%A5+%22Data+is+the+new+oil%2C+AI+is+the+engine%22;%F0%9F%A7%A0+%22Think+big%2C+build+smart%2C+ship+fast%22;&#128640;+%22Every+model+trained+is+a+step+forward%22" alt="Quote Typing"/>
+  </a>
 
-  <br/><br/>
+</div>
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a1a2e,100:0d1117&height=120&section=footer&animation=fadeIn" alt="Footer"/>
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a1a2e,100:0d1117&height=130&section=footer&animation=fadeIn&fontColor=58a6ff" alt="Footer"/>
 
   <b>&#10024; Let's build the future with AI — one model at a time &#10024;</b>
 
