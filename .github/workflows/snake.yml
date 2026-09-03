@@ -48,7 +48,7 @@ jobs:
 
           username = "talha963"
           token = os.environ.get("GITHUB_TOKEN", "")
-
+          
           headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
           query = """
           query($login: String!) {
@@ -68,7 +68,7 @@ jobs:
             }
           }
           """
-
+          
           try:
             r = requests.post("https://api.github.com/graphql",
                 headers=headers,
@@ -82,7 +82,7 @@ jobs:
             weeks = []
             total = 0
 
-          # Layout
+          # SVG generation
           cell = 13
           gap = 3
           cols = len(weeks)
@@ -101,56 +101,52 @@ jobs:
               if m not in months:
                 months[m] = wi
 
+          svg_parts = []
+          svg_parts.append(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+          <style>
+            @keyframes fadeIn {{ from {{opacity:0}} to {{opacity:1}} }}
+            .cell {{ animation: fadeIn 1.5s ease forwards; }}
+            text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
+          </style>
+          <rect width="{width}" height="{height}" rx="8" fill="#0d1117"/>
+          <text x="{pad_left}" y="22" fill="#8b949e" font-size="12">Contribution Calendar — {total} contributions in the last year</text>
+          ''')
+
+          # Month labels
           month_names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+          rendered_months = set()
+          for m_key, wi in months.items():
+            month_num = int(m_key.split("-")[1]) - 1
+            label = month_names[month_num]
+            if label not in rendered_months:
+              x = pad_left + wi * (cell + gap)
+              svg_parts.append(f'<text x="{x}" y="{pad_top - 5}" fill="#8b949e" font-size="10">{label}</text>')
+              rendered_months.add(label)
 
-          def build_svg(bg, fg_muted, empty_cell):
-            svg_parts = []
-            svg_parts.append(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-            <style>
-              @keyframes fadeIn {{ from {{opacity:0}} to {{opacity:1}} }}
-              .cell {{ animation: fadeIn 1.5s ease forwards; }}
-              text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
-            </style>
-            <rect width="{width}" height="{height}" rx="8" fill="{bg}"/>
-            <text x="{pad_left}" y="22" fill="{fg_muted}" font-size="12">Contribution Calendar — {total} contributions in the last year</text>
-            ''')
+          # Cells
+          for wi, week in enumerate(weeks):
+            for di, day in enumerate(week["contributionDays"]):
+              x = pad_left + wi * (cell + gap)
+              y = pad_top + di * (cell + gap)
+              color = day["color"] if day["color"] != "#ebedf0" else "#161b22"
+              # Make 0 contributions a dark color for dark theme
+              if day["contributionCount"] == 0:
+                color = "#161b22"
+              delay = (wi * 7 + di) * 0.005
+              count = day["contributionCount"]
+              svg_parts.append(
+                f'<rect class="cell" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{color}" style="animation-delay:{delay:.3f}s">'
+                f'<title>{day["date"]}: {count} contribution{"s" if count != 1 else ""}</title>'
+                f'</rect>'
+              )
 
-            rendered_months = set()
-            for m_key, wi in months.items():
-              month_num = int(m_key.split("-")[1]) - 1
-              label = month_names[month_num]
-              if label not in rendered_months:
-                x = pad_left + wi * (cell + gap)
-                svg_parts.append(f'<text x="{x}" y="{pad_top - 5}" fill="{fg_muted}" font-size="10">{label}</text>')
-                rendered_months.add(label)
-
-            for wi, week in enumerate(weeks):
-              for di, day in enumerate(week["contributionDays"]):
-                x = pad_left + wi * (cell + gap)
-                y = pad_top + di * (cell + gap)
-                color = empty_cell if day["contributionCount"] == 0 else day["color"]
-                delay = (wi * 7 + di) * 0.005
-                count = day["contributionCount"]
-                svg_parts.append(
-                  f'<rect class="cell" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{color}" style="animation-delay:{delay:.3f}s">'
-                  f'<title>{day["date"]}: {count} contribution{"s" if count != 1 else ""}</title>'
-                  f'</rect>'
-                )
-
-            svg_parts.append('</svg>')
-            return "\n".join(svg_parts)
-
+          svg_parts.append('</svg>')
+          
           os.makedirs("dist", exist_ok=True)
-
-          # Dark variant (GitHub dark mode)
-          with open("dist/contribution-graph-dark.svg", "w") as f:
-            f.write(build_svg(bg="#0d1117", fg_muted="#8b949e", empty_cell="#161b22"))
-
-          # Light variant (GitHub light mode)
-          with open("dist/contribution-graph-light.svg", "w") as f:
-            f.write(build_svg(bg="#ffffff", fg_muted="#57606a", empty_cell="#ebedf0"))
-
-          print(f"Generated dark+light contribution graphs with {total} total contributions, {cols} weeks")
+          with open("dist/contribution-graph.svg", "w") as f:
+            f.write("\n".join(svg_parts))
+          
+          print(f"Generated contribution graph with {total} total contributions, {cols} weeks")
           PYEOF
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
